@@ -1,0 +1,16 @@
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.kitty-file {
+  animation: moveUpDown 2s ease-in-out infinite;
+}
+
+/*# sourceMappingURL=temp-sass-css.css.map */

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<link rel="stylesheet" href="./home-files/css/template-styles.css">
+<link rel="stylesheet" href="./home-files/css/temp-sass-css.css">
+    </head>
+    <body>
+        <div class="home-container">
+            <div style="margin-top: -4%; margin-left: -2%;"><button ng-click="toggleSkins()" style="border: none; color: rgb(205, 160, 102); background-color: white;  box-shadow: 5px 5px 10px rgba(182, 182, 182, 0.5); border-radius: 8px;"><span class="material-symbols-outlined" style="font-size: 60px; padding-top: 8px; padding-left: 2px;">palette</span></button></div>
+      <div class="home-col">
+            <div ng-if="selectedSkin == 'white'" class="kitty-file" ng-include="'./home-files/components/whiteHelloKitty.html'"></div>
+            <div ng-if="selectedSkin == 'tan'"  class="kitty-file" ng-include="'./home-files/components/tanHelloKitty.html'"></div>
+            <div ng-if="selectedSkin == 'brown'"  class="kitty-file" ng-include="'./home-files/components/brownHelloKitty.html'"></div>
+            <div style="margin-top: -8%;">
+             <div id="speech-bubble" style="box-shadow: 5px 5px 10px rgba(182, 182, 182, 0.5); border-radius: 8px;"><p >{{ kittyResponse }}</p></div>
+             <form>
+                <div class="input-button-div"><div><textarea  rows="10" cols="30" name="input" ng-model="Data.input" type="text" style="width: 400px"></textarea></div> <div style="margin-top: 8%;"><button style="border: none; height: 70px; width:100px; background-color: white; border-radius: 4px; color: rgb(240, 126, 126);  box-shadow: 5px 5px 10px rgba(166, 166, 166, 0.6);" ng-click="sendMessage()"><span style="font-size: 70px" class="material-symbols-outlined">relax</span></button></div></div>
+             </form>
+             
+             </div>
+            </div>
+        </div>
+    </body>
+
+</html>
